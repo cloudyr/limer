@@ -1,0 +1,15 @@
+Package: limer
+Type: Package
+Title: A LimeSurvey R Client
+Version: 0.1
+Date: 2015-06-05
+Author: Andrew Heiss
+Maintainer: Andrew Heiss <andrew@andrewheiss.com>
+Description: More about what it does (maybe more than one line)
+Imports:
+  httr,
+  jsonlite
+License: MIT + file LICENSE
+LazyData: TRUE
+URL: https://github.com/andrewheiss/limer
+BugReports: https://github.com/andrewheiss/limer/issues
