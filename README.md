@@ -30,7 +30,7 @@ options(lime_user_id = 'put_user_id_here')
 options(lime_password = 'put_password_here')
 ```
 
-Before calling the API, you need to generate an access token. Many services provide tokens that last indefinitely, but by default LimeSurvey's will only last for two hours (though this can be modified by editing `limesurvey/application/config/config-default.php` and changing `$config['iSessionExpirationTime'] = 7200;`). Examples of how to do this are shown below.
+Before calling the API, you need to generate an access token (examples of how to do this are shown below). Many services provide tokens that last indefinitely, but by default LimeSurvey's will only last for two hours (though this can be modified by editing `limesurvey/application/config/config-default.php` and changing `$config['iSessionExpirationTime'] = 7200;`). 
 
 
 ## Code examples
