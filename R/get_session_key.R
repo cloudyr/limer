@@ -7,8 +7,9 @@
 #' @return API token
 #' @import httr
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' get_session_key()
+#' }
 
 get_session_key <- function(username = getOption('lime_username'),
                             password = getOption('lime_password'),
@@ -27,6 +28,10 @@ get_session_key <- function(username = getOption('lime_username'),
   r <- POST(getOption('lime_api'), content_type_json(),
             body = jsonlite::toJSON(body.json, auto_unbox = TRUE))
 
-  # TODO: Return a
-  return(as.character(jsonlite::fromJSON(content(r))$result))
+  session_key <- as.character(jsonlite::fromJSON(content(r))$result)
+  session_cache$session_key <- session_key
+  session_key
 }
+
+# Start a new environment to hold the session key so all other functions can access it
+session_cache <- new.env(parent = emptyenv())

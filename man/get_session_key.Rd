@@ -22,6 +22,8 @@ API token
 This function logs into the LimeSurvey API and provides an access session key.
 }
 \examples{
+\dontrun{
 get_session_key()
+}
 }
 
