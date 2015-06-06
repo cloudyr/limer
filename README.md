@@ -19,7 +19,7 @@ library("limer")
 
 ## Setup
 
-Make sure you have enabled LimeSurvey's RPC interface, found in the administration section: Global settings > Interfaces > RPC interface enabled = JSON-RPC (*not* XML-RPC). You don't need to publish the API on `admin/remotecontrol`—all those details are [available elsewhere](http://api.limesurvey.org). The API URL should look something like http://example.com/limesurvey/admin/remotecontrol.
+Make sure you have enabled LimeSurvey's RPC interface, found in the administration section: Global settings > Interfaces > RPC interface enabled = JSON-RPC (*not* XML-RPC). You don't need to publish the API on `admin/remotecontrol`—all those details are [available elsewhere](http://api.limesurvey.org/classes/remotecontrol_handle.html). The API URL should look something like http://example.com/limesurvey/admin/remotecontrol.
 
 Load your API details and user credentials into R using `options()`:
 
@@ -50,7 +50,7 @@ get_session_key()  # Log in
 responses <- get_responses(12345)  # Get results from survey
 ```
 
-You can also run any arbitrary API call using `call_limer()` (`get_responses()` and other functions are just convenient wrappers around `call_limer()`):
+You can also run [any arbitrary API call](https://manual.limesurvey.org/RemoteControl_2_API) using `call_limer()` (`get_responses()` and other functions are just convenient wrappers around `call_limer()`):
 
 ```R
 # Get a list of all the surveys
