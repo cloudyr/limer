@@ -26,7 +26,6 @@ Load your API details and user credentials into R using `options()`:
 ```R
 options(lime_api = 'http://example.com/limesurvey/admin/remotecontrol')
 options(lime_username = 'put_username_here')
-options(lime_user_id = 'put_user_id_here')
 options(lime_password = 'put_password_here')
 ```
 

@@ -5,15 +5,12 @@
 \title{Get a LimeSurvey API session key}
 \usage{
 get_session_key(username = getOption("lime_username"),
-  password = getOption("lime_password"),
-  user_id = getOption("lime_user_id"))
+  password = getOption("lime_password"))
 }
 \arguments{
 \item{username}{LimeSurvey username. Defaults to value set in \code{options()}.}
 
 \item{password}{LimeSurvey password Defaults to value set in \code{options()}.}
-
-\item{user_id}{LimeSurvey user ID. Defaults to value set in \code{options()}.}
 }
 \value{
 API token
