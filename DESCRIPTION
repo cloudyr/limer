@@ -7,6 +7,7 @@ Author: Andrew Heiss
 Maintainer: Andrew Heiss <andrew@andrewheiss.com>
 Description: More about what it does (maybe more than one line)
 Imports:
+  base64enc,
   httr,
   jsonlite
 License: MIT + file LICENSE
