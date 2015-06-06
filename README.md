@@ -67,3 +67,8 @@ At the end of your script or session, it's nice to release the session key. If y
 ```R
 release_session_key()
 ```
+
+
+## Roadmap
+
+For now, the only special thing this package does is provide `get_responses()`. In the future I hope to add convenience functions for creating new surveys, managing responses, and running other common API operations. Regardless, all API functions are accessible with `call_limer(method = "whatever")`.
