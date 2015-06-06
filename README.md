@@ -29,9 +29,41 @@ options(lime_username = 'put_username_here')
 options(lime_password = 'put_password_here')
 ```
 
-Before calling the API, you need to generate an access token (examples of how to do this are shown below). Many services provide tokens that last indefinitely, but by default LimeSurvey's will only last for two hours (though this can be modified by editing `limesurvey/application/config/config-default.php` and changing `$config['iSessionExpirationTime'] = 7200;`). 
+Before calling the API, you need to generate an access token with `get_session_key()` (examples of how to do this are shown below). Many services provide tokens that last indefinitely, but by default LimeSurvey's will only last for two hours. (this can be modified by editing `limesurvey/application/config/config-default.php` and changing `$config['iSessionExpirationTime'] = 7200;` to something else). 
 
 
 ## Code examples
 
-To come…
+Here's how easy it is to export the results from a survey:
+
+```R
+# Load library
+library(limer)
+
+# Setup API details
+options(lime_api = 'http://example.com/limesurvey/admin/remotecontrol')
+options(lime_username = 'put_username_here')
+options(lime_password = 'put_password_here')
+
+# Do stuff with LimeSurvey API
+get_session_key()  # Log in
+responses <- get_responses(12345)  # Get results from survey
+```
+
+You can also run any arbitrary API call using `call_limer()` (`get_responses()` and other functions are just convenient wrappers around `call_limer()`):
+
+```R
+# Get a list of all the surveys
+call_limer(method = "list_surveys")
+
+# Get the number of completed responses for a survey
+call_limer(method = "get_summary", 
+           params = list(iSurveyID = 12345,
+                         sStatname = "completed_responses"))
+```
+
+At the end of your script or session, it's nice to release the session key. If you don't release the session key, LimeSurvey will eventually clean it up.
+
+```R
+release_session_key()
+```

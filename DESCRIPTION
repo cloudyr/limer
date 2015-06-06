@@ -5,7 +5,10 @@ Version: 0.1
 Date: 2015-06-05
 Author: Andrew Heiss
 Maintainer: Andrew Heiss <andrew@andrewheiss.com>
-Description: More about what it does (maybe more than one line)
+Description:
+  Provides access to LimeSurvey's RemoteControl 2 API, allowing
+  you to collect and analyze survey data in a simple,
+  reproducible workflow.
 Imports:
   base64enc,
   httr,
