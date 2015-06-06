@@ -2,6 +2,7 @@
 
 export(base64_to_df)
 export(call_limer)
+export(get_responses)
 export(get_session_key)
 export(release_session_key)
 import(httr)
