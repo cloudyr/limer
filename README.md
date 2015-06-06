@@ -62,6 +62,19 @@ call_limer(method = "get_summary",
                          sStatname = "completed_responses"))
 ```
 
+If the API call returns base64 encoded text, you can convert it to a data frame with `base64_to_df()`:
+
+```R
+raw_data <- call_limer(method = "export_responses", 
+                       params = list(iSurveyID = 12345, 
+                                     sDocumentType = "csv", 
+                                     sLanguageCode = "en", 
+                                     sCompletionStatus = "complete", 
+                                     sHeadingType = "code", 
+                                     sResponseType = "long"))
+base64_to_df(raw_data)
+```
+
 At the end of your script or session, it's nice to release the session key. If you don't release the session key, LimeSurvey will eventually clean it up.
 
 ```R
@@ -72,3 +85,5 @@ release_session_key()
 ## Roadmap
 
 For now, the only special thing this package does is provide `get_responses()`. In the future I hope to add convenience functions for creating new surveys, managing responses, and running other common API operations. Regardless, all API functions are accessible with `call_limer(method = "whatever")`.
+
+`get_responses()` currently defaults to CSV, but the API can also return JSON, which might actually be better for transferring data over the internet. I'll eventually add JSON support.
