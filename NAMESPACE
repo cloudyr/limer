@@ -2,4 +2,5 @@
 
 export(call_limer)
 export(get_session_key)
+export(release_session_key)
 import(httr)
