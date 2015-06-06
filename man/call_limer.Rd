@@ -4,9 +4,25 @@
 \alias{call_limer}
 \title{Make a call to the LimeSurvey API}
 \usage{
-call_limer()
+call_limer(method, params = list(), ...)
+}
+\arguments{
+\item{method}{API function to call. Full lis Defaults to value set in \code{options()}.}
+
+\item{params}{Optional named list of parameters to pass to the function.}
+}
+\value{
+Results from the API (sometimes plain text, sometimes base64-encoded text).
 }
 \description{
-This function makes a generic call to the LimeSurvey API,
+This function makes a generic call to the LimeSurvey API. See \url{https://manual.limesurvey.org/RemoteControl_2_API} for API documentation.
+}
+\examples{
+\dontrun{
+call_limer(method = "list_surveys")
+call_limer(method = "get_summary",
+           params = list(iSurveyID = 238481,
+                         sStatname = "completed_responses"))
+}
 }
 
