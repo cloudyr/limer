@@ -5,15 +5,15 @@ Version: 0.1
 Date: 2015-06-05
 Author: Andrew Heiss
 Maintainer: Andrew Heiss <andrew@andrewheiss.com>
-Description:
-  Provides access to LimeSurvey's RemoteControl 2 API, allowing
-  you to collect and analyze survey data in a simple,
-  reproducible workflow.
+Description: Provides access to LimeSurvey's RemoteControl 2 API, allowing
+    you to collect and analyze survey data in a simple,
+    reproducible workflow.
 Imports:
-  base64enc,
-  httr,
-  jsonlite
+    base64enc,
+    httr,
+    jsonlite
 License: MIT + file LICENSE
 LazyData: TRUE
 URL: https://github.com/andrewheiss/limer
 BugReports: https://github.com/andrewheiss/limer/issues
+RoxygenNote: 5.0.1
