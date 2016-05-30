@@ -3,6 +3,7 @@
 #' This function makes a generic call to the LimeSurvey API. See \url{https://manual.limesurvey.org/RemoteControl_2_API} for API documentation.
 #' @param method API function to call. Full lis Defaults to value set in \code{options()}.
 #' @param params Optional named list of parameters to pass to the function.
+#' @param \dots Other arguments passed to \code{\link[httr]{POST}}.
 #' @return Results from the API (sometimes plain text, sometimes base64-encoded text).
 #' @import httr
 #' @export

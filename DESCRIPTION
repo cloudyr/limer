@@ -14,6 +14,6 @@ Imports:
     jsonlite
 License: MIT + file LICENSE
 LazyData: TRUE
-URL: https://github.com/andrewheiss/limer
-BugReports: https://github.com/andrewheiss/limer/issues
+URL: https://github.com/cloudyr/limer
+BugReports: https://github.com/cloudyr/limer/issues
 RoxygenNote: 5.0.1

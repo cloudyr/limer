@@ -10,6 +10,8 @@ call_limer(method, params = list(), ...)
 \item{method}{API function to call. Full lis Defaults to value set in \code{options()}.}
 
 \item{params}{Optional named list of parameters to pass to the function.}
+
+\item{\dots}{Other arguments passed to \code{\link[httr]{POST}}.}
 }
 \value{
 Results from the API (sometimes plain text, sometimes base64-encoded text).

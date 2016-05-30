@@ -6,6 +6,9 @@
 \usage{
 base64_to_df(x)
 }
+\arguments{
+\item{x}{\dots}
+}
 \description{
 This function converts raw base64 results into a data frame.
 }
