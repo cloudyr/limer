@@ -1,3 +1,5 @@
+[![Travis-CI Build Status](https://travis-ci.org/andrewheiss/limer.svg?branch=master)](https://travis-ci.org/andrewheiss/limer)
+
 # limer: A LimeSurvey R client
 
 **limer** provides access to [LimeSurvey](https://www.limesurvey.org)'s [RemoteControl 2 API](https://manual.limesurvey.org/RemoteControl_2_API), allowing you to collect and analyze survey data in a simple, reproducible workflow.
