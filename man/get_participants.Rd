@@ -6,6 +6,17 @@
 \usage{
 get_participants(iSurveyID, iStart, iLimit, bUnused, aAttributes)
 }
+\arguments{
+\item{iSurveyID}{\dots}
+
+\item{iStart}{\dots}
+
+\item{iLimit}{\dots}
+
+\item{bUnused}{\dots}
+
+\item{aAttributes}{\dots}
+}
 \description{
 This function exports and downloads the list of participants from a LimeSurvey survey.
 }

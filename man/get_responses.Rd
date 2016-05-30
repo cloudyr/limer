@@ -8,6 +8,21 @@ get_responses(iSurveyID, sDocumentType = "csv", sLanguageCode = "en",
   sCompletionStatus = "complete", sHeadingType = "code",
   sResponseType = "long", ...)
 }
+\arguments{
+\item{iSurveyID}{\dots}
+
+\item{sDocumentType}{\dots}
+
+\item{sLanguageCode}{\dots}
+
+\item{sCompletionStatus}{\dots}
+
+\item{sHeadingType}{\dots}
+
+\item{sResponseType}{\dots}
+
+\item{\dots}{Further arguments to \code{\link{call_limer}}.}
+}
 \description{
 This function exports and downloads data from a LimeSurvey survey.
 }

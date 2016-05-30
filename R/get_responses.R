@@ -1,6 +1,13 @@
 #' Export data from a LimeSurvey survey
 #'
 #' This function exports and downloads data from a LimeSurvey survey.
+#' @param iSurveyID \dots
+#' @param sDocumentType \dots
+#' @param sLanguageCode \dots
+#' @param sCompletionStatus \dots
+#' @param sHeadingType \dots
+#' @param sResponseType \dots
+#' @param \dots Further arguments to \code{\link{call_limer}}.
 #' @export
 #' @examples \dontrun{
 #' get_responses(12345)

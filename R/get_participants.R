@@ -1,6 +1,11 @@
 #' Export list of participants from a LimeSurvey survey
 #'
 #' This function exports and downloads the list of participants from a LimeSurvey survey.
+#' @param iSurveyID \dots
+#' @param iStart \dots
+#' @param iLimit \dots
+#' @param bUnused \dots
+#' @param aAttributes \dots
 #' @export
 #' @examples \dontrun{
 #' get_responses(12345)

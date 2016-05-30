@@ -1,0 +1,15 @@
+citHeader("To cite package 'limer' in publications use:")
+     
+ year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+ vers <- paste("R package version", meta$Version)
+ 
+ citEntry(entry="Manual",
+		  title = "limer: A LimeSurvey R Client",
+		  author = personList(as.person("Andrew Heiss")),
+		  year = year,
+		  note = vers,
+		  textVersion =
+		  paste("Andrew Heiss (",
+				year,
+				"). limer: A LimeSurvey R Client. ",
+				vers, ".", sep=""))
