@@ -17,3 +17,4 @@ LazyData: TRUE
 URL: https://github.com/cloudyr/limer
 BugReports: https://github.com/cloudyr/limer/issues
 RoxygenNote: 5.0.1
+Suggests: testthat
