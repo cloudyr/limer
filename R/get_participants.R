@@ -10,8 +10,6 @@
 #' @examples \dontrun{
 #' get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE,
 #'                                    aAttributes=c('attribute_1','attribute_2'))
-#' }
-#' @examples \dontrun{
 #' get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE, aAttributes=FALSE)
 #' }
 
