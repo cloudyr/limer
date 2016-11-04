@@ -13,7 +13,7 @@
 #' get_responses(12345)
 #' }
 
-get_responses <- function(iSurveyID, sDocumentType = "csv", sLanguageCode = "en",
+get_responses <- function(iSurveyID, sDocumentType = "csv", sLanguageCode = NULL,
                           sCompletionStatus = "complete", sHeadingType = "code",
                           sResponseType = "long", ...) {
   # Put all the function's arguments in a list to then be passed to call_limer()
