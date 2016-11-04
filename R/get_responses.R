@@ -18,6 +18,9 @@ get_responses <- function(iSurveyID, sDocumentType = "csv", sLanguageCode = "en"
                           sResponseType = "long", ...) {
   # Put all the function's arguments in a list to then be passed to call_limer()
   params <- as.list(environment())
+  dots <- list(...)
+  if(length(dots) > 0) params <- append(params,dots)
+  # print(params) # uncomment to debug the params
 
   results <- call_limer(method = "export_responses", params = params)
   return(base64_to_df(unlist(results)))
