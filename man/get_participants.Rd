@@ -4,7 +4,8 @@
 \alias{get_participants}
 \title{Export list of participants from a LimeSurvey survey}
 \usage{
-get_participants(iSurveyID, iStart, iLimit, bUnused, aAttributes)
+get_participants(iSurveyID, iStart, iLimit, bUnused, aAttributes,
+  aConditions = list())
 }
 \arguments{
 \item{iSurveyID}{\dots}
@@ -25,6 +26,6 @@ This function exports and downloads the list of participants from a LimeSurvey s
 get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE,
                                    aAttributes=c('attribute_1','attribute_2'))
 get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE, aAttributes=FALSE)
+get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE, aAttributes=FALSE, aConditions = list("email" = "example@domain"))
 }
 }
-

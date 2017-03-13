@@ -11,9 +11,10 @@
 #' get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE,
 #'                                    aAttributes=c('attribute_1','attribute_2'))
 #' get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE, aAttributes=FALSE)
+#' get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE, aAttributes=FALSE, aConditions = list("email" = "example@domain"))
 #' }
 
-get_participants <- function(iSurveyID, iStart, iLimit, bUnused, aAttributes){
+get_participants <- function(iSurveyID, iStart, iLimit, bUnused, aAttributes, aConditions = list()){
   # Put all the function's arguments in a list to then be passed to call_limer()
   params <- as.list(environment())
 
