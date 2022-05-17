@@ -36,5 +36,5 @@ call_limer <- function(method, params = list(), ...) {
   r <- httr::POST(getOption('lime_api'), httr::content_type_json(),
             body = jsonlite::toJSON(body.json, auto_unbox = TRUE), ...)
 
-  return(jsonlite::fromJSON(httr::content(r, as='text', encoding="utf-8"))$result)   # incorporated fix by petrbouchal
+  return(jsonlite::parse_json(httr::content(r, as='text', encoding="utf-8"))$result)   # incorporated fix by petrbouchal
 }
