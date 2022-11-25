@@ -2,6 +2,9 @@
 
 export(base64_to_df)
 export(call_limer)
+export(export_survey_archive)
+export(export_survey_structure)
+export(get_participant_property)
 export(get_participants)
 export(get_responses)
 export(get_session_key)
