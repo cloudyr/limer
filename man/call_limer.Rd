@@ -4,12 +4,15 @@
 \alias{call_limer}
 \title{Make a call to the LimeSurvey API}
 \usage{
-call_limer(method, params = list(), ...)
+call_limer(method, params = list(), ssl_verifypeer = FALSE, ...)
 }
 \arguments{
 \item{method}{API function to call. Full lis Defaults to value set in \code{options()}.}
 
 \item{params}{Optional named list of parameters to pass to the function.}
+
+\item{ssl_verifypeer}{boolean \code{httr::config()} parameter. Default is
+FALSE.}
 
 \item{\dots}{Other arguments passed to \code{\link[httr]{POST}}.}
 }
@@ -27,4 +30,3 @@ call_limer(method = "get_summary",
                          sStatname = "completed_responses"))
 }
 }
-

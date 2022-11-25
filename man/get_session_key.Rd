@@ -4,13 +4,19 @@
 \alias{get_session_key}
 \title{Get a LimeSurvey API session key}
 \usage{
-get_session_key(username = getOption("lime_username"),
-  password = getOption("lime_password"))
+get_session_key(
+  username = getOption("lime_username"),
+  password = getOption("lime_password"),
+  ssl_verifypeer = FALSE
+)
 }
 \arguments{
 \item{username}{LimeSurvey username. Defaults to value set in \code{options()}.}
 
 \item{password}{LimeSurvey password Defaults to value set in \code{options()}.}
+
+\item{ssl_verifypeer}{boolean \code{httr::config()} parameter. Default is
+FALSE.}
 }
 \value{
 API token
@@ -23,4 +29,3 @@ This function logs into the LimeSurvey API and provides an access session key.
 get_session_key()
 }
 }
-

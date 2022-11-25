@@ -3,6 +3,8 @@
 #' This function makes a generic call to the LimeSurvey API. See \url{https://manual.limesurvey.org/RemoteControl_2_API} for API documentation.
 #' @param method API function to call. Full lis Defaults to value set in \code{options()}.
 #' @param params Optional named list of parameters to pass to the function.
+#' @param ssl_verifypeer boolean \code{httr::config()} parameter. Default is
+#' FALSE.
 #' @param \dots Other arguments passed to \code{\link[httr]{POST}}.
 #' @return Results from the API (sometimes plain text, sometimes base64-encoded text).
 #' @import httr
@@ -15,7 +17,7 @@
 #' }
 #' @export
 
-call_limer <- function(method, params = list(), ...) {
+call_limer <- function(method, params = list(), ssl_verifypeer = FALSE,  ...) {
   if (!is.list(params)) {
     stop("params must be a list.")
   }
@@ -33,8 +35,13 @@ call_limer <- function(method, params = list(), ...) {
                     id = " ",
                     params = params.full)
 
-  r <- httr::POST(getOption('lime_api'), httr::content_type_json(),
-            body = jsonlite::toJSON(body.json, auto_unbox = TRUE), ...)
+  r <- httr::POST(
+    getOption('lime_api'),
+    httr::content_type_json(),
+    body = jsonlite::toJSON(body.json, auto_unbox = TRUE),
+    httr::config(ssl_verifypeer = ssl_verifypeer),
+    ...
+  )
 
-  return(jsonlite::fromJSON(httr::content(r, as='text', encoding="utf-8"))$result)   # incorporated fix by petrbouchal
+  return(jsonlite::fromJSON(httr::content(r, as = 'text', encoding = "utf-8"))$result)   # incorporated fix by petrbouchal
 }
