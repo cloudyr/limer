@@ -14,10 +14,12 @@ get_participant_property(iSurveyID, aTokenQueryProperties, aTokenProperties)
 \item{aTokenProperties}{\dots}
 }
 \description{
-This function exports and downloads a participant property from a LimeSurvey survey.
+This function exports and downloads a participant property from a LimeSurvey
+survey.
 }
 \examples{
 \dontrun{
-get_participant_property(iSurveyID = 12345, aTokenQueryProperties = 1, aTokenProperties = list("attribute_1"))
+get_participant_property(iSurveyID = 12345, aTokenQueryProperties = 1, +
+aTokenProperties = list("attribute_1"))
 }
 }

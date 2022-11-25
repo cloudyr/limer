@@ -17,4 +17,3 @@ This function converts raw base64 results into a data frame.
 base64_to_df()
 }
 }
-

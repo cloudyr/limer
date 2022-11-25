@@ -27,4 +27,3 @@ get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE,
 get_participants(12345, iStart=1, iLimit=10, bUnused=FALSE, aAttributes=FALSE)
 }
 }
-

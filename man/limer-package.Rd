@@ -2,8 +2,8 @@
 % Please edit documentation in R/limer-package.R
 \docType{package}
 \name{limer-package}
-\alias{limer}
 \alias{limer-package}
+\alias{limer}
 \title{limer-package}
 \description{
 A LimeSurvey R Client
@@ -17,4 +17,3 @@ Provides access to LimeSurvey's RemoteControl 2 API, allowing
 Andrew Heiss <andrew@andrewheiss.com>
 }
 \keyword{package}
-

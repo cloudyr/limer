@@ -14,4 +14,3 @@ This function clears the LimeSurvey API session key currently in use, effectivel
 release_session_key()
 }
 }
-
