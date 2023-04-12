@@ -14,7 +14,7 @@ get_session_key <- function(username = getOption('lime_username'),
                             password = getOption('lime_password')) {
   body.json = list(method = "get_session_key",
                    id = " ",
-                   params = list(admin = username,
+                   params = list(username = username,
                                  password = password))
 
     # Need to use jsonlite::toJSON because single elements are boxed in httr, which
