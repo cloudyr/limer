@@ -12,6 +12,8 @@
 
 get_session_key <- function(username = getOption('lime_username'),
                             password = getOption('lime_password')) {
+
+
   body.json = list(method = "get_session_key",
                    id = " ",
                    params = list(username = username,
@@ -26,7 +28,8 @@ get_session_key <- function(username = getOption('lime_username'),
   r <- POST(getOption('lime_api'), content_type_json(),
             body = jsonlite::toJSON(body.json, auto_unbox = TRUE))
 
-  session_key <- as.character(jsonlite::fromJSON(content(r, as='text', encoding="utf-8"))$result)
+  session_key <- as.character(httr::content(r, encoding = "utf-8")$result)
+
   session_cache$session_key <- session_key
   session_key
 }
