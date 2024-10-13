@@ -3,6 +3,7 @@
 #' This function logs into the LimeSurvey API and provides an access session key.
 #' @param username LimeSurvey username. Defaults to value set in \code{options()}.
 #' @param password LimeSurvey password Defaults to value set in \code{options()}.
+#' @param auth LimeSurvey Auth Plugin Defaults to value set in \code{options() - if no value set uses Authdb}.
 #' @return API token
 #' @import httr
 #' @export
@@ -11,11 +12,13 @@
 #' }
 
 get_session_key <- function(username = getOption('lime_username'),
-                            password = getOption('lime_password')) {
+                            password = getOption('lime_password'),
+                            plugin = getOption('lime_auth',default='Authdb')) {
   body.json = list(method = "get_session_key",
                    id = " ",
                    params = list(username = username,
-                                 password = password))
+                                 password = password,
+                                 plugin = plugin))
 
     # Need to use jsonlite::toJSON because single elements are boxed in httr, which
   # is goofy. toJSON can turn off the boxing automatically, though it's not
